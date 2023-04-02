@@ -1,76 +1,203 @@
-var arrayOfQuotes = [
-    {'author': 'Oscar Wilde', 
-     'quote': 'Be yourself; everyone else is already taken.'
-    },
-    {'author': 'Albert Einstein', 
-     'quote': 'Two things are infinite: the universe and human stupidity; and I\'m not sure about the universe.'
-    },
-    {'author': 'Frank Zappa', 
-     'quote': 'So many books, so little time.'
-    },
-    {'author': 'Marcus Tullius Cicero', 
-     'quote': 'A room without books is like a body without a soul.'
-    },
-    {'author': 'Bernard M. Baruch', 
-     'quote': 'Be who you are and say what you feel, because those who mind don\'t matter, and those who matter don\'t mind.'
-    },
-    {'author': 'Mahatma Gandhi', 
-     'quote': 'Be the change that you wish to see in the world.'
+
+$("#click").click(function(){
+
+   $("#first").removeClass("d-none");
+   $(".first").removeClass("d-none");
+   $("#click2").removeClass("d-none");
+   $("#click").addClass("d-none");
+
+})
+$("#click2").click(function(){
+    $(".first").addClass("d-none");
+ $(".second").removeClass("d-none");
+ $("#click2").addClass("d-none");
+ $("#click3").removeClass("d-none");
+
+ 
+ })
+ $("#click3").click(function(){
+    $(".second").addClass("d-none");
+ $(".third").removeClass("d-none");
+ $("#click3").addClass("d-none");
+ $("#click4").removeClass("d-none");
+
+ 
+ })
+ $("#click4").click(function(){
+    $(".third").addClass("d-none");
+ $(".fourth").removeClass("d-none");
+ $(".fourth2").removeClass("d-none");
+ $("#click4").addClass("d-none");
+ $("#click5").removeClass("d-none");
+
+ 
+ })
+ $("#click5").click(function(){
+    $(".fourth").addClass("d-none");
+    $(".fourth2").addClass("d-none");
+ $(".fifth").removeClass("d-none");
+
+ $("#click5").addClass("d-none");
+ $("#click6").removeClass("d-none");
+
+ 
+ })
+ $("#click6").click(function(){
+    $(".fifth").addClass("d-none");
+    
+ $(".sixth").removeClass("d-none");
+
+ $("#click6").addClass("d-none");
+ $("#click7").removeClass("d-none");
+
+ 
+ })
+ const songs = [
+    {
+      name: "Perfect",
+      link: "https://www.dropbox.com/s/3mjzj73400sxovk/perfect.mp3?raw=1",
+      artists: "Ed Sheeran",
+      image: "https://www.dropbox.com/s/crlthbozdznb13g/perfect.jpeg?raw=1"
     },
     {
-     'author': 'Robert Frost',
-     'quote':'In three words I can sum up everything I\'ve learned about life: it goes on.'
-
-    },
-    { 
-     'author' : 'Mark Twain',
-     'quote':'If you tell the truth, you don\'t have to remember anything.'
-        
-    },
-];
-var arrayOfQuotesAr = [
-    {'author': 'عمر بن الخطاب', 
-     'quote': '.عاملوا الناس بما يُظهرون لكم، والله يتولّى مافي صدورهم'
-    },
-    {'author': 'أبو الطيب المتنبي', 
-     'quote': '.من لم يمت بالسيف مات بغيره ... تعددت الاسباب و الموت واحد'
-    },
-    {'author': 'صلاح الدين الايوبي', 
-     'quote': '.قد يتحول كل شي ضدك و يبقى الله معك ، فكن مع الله يكن كل شي معك  '
-    },
-    {'author': 'جبران خليل جبران', 
-     'quote': '.قد تنسى الذي ضحكت معه ، و لـكن لن تنسى الذي بكيت معه '
-    },
-    {'author': 'ابن تيمية', 
-     'quote': '.من عمل بما علم ، أورثــه الله علم ما لم يعلم '
-    },
-    {'author': 'عباس محمود العقاد', 
-     'quote': ' .إننا نقرأ لنبتعد عن نقطة الجهل، لا لنصل إلى نقطة العلم'
+      name: "7 Rings",
+      link: "https://www.dropbox.com/s/yo5tcfdjoz95ozf/7-rings.mp3?raw=1",
+      artists: "Ariana Grande",
+      image: "https://www.dropbox.com/s/gobvfxj4r0t053v/7-rings.jpg?raw=1"
     },
     {
-     'author': 'عبد الله بن المقفع',
-     'quote':'.اذا أسدى شخص اليك جميلا فحذار أن تنساه '
-
+      name: "Happier",
+      link: "https://www.dropbox.com/s/zp1xfir101y4sc3/happier.mp3?raw=1",
+      artists: "Marshmello",
+      image: "https://www.dropbox.com/s/xxmwcz14hkn7iwl/happier.png?raw=1"
     },
-    { 
-     'author' : 'الشافعي',
-     'quote':'.لا ترفع سعرك فيـردك الله الى ثمنك'
-        
+    {
+      name: "Stay",
+      link: "https://www.dropbox.com/s/umam9olakop001d/stay.mp3?raw=1",
+      artists: "Justin Bieber",
+      image: "https://www.dropbox.com/s/kierj5lzst1yx9n/stay.jpg?raw=1"
     },
-];
-
-function generateQuote(){
-    var random = Number.parseInt(Math.random()*arrayOfQuotes.length + 1);
-    document.getElementById("quote").innerHTML = `\"${arrayOfQuotes[random].quote}\"`;
-    document.getElementById("author").innerHTML = `--${arrayOfQuotes[random].author}`;
-       
-    
-}
-function generateQuoteِِِAr(){
-
-    var random = Number.parseInt(Math.random()*arrayOfQuotesAr.length + 1);
-    document.getElementById("quoteAr").innerHTML = `\"${arrayOfQuotesAr[random].quote}\"`;
-    document.getElementById("authorAr").innerHTML = `${arrayOfQuotesAr[random].author}--`;
-       
-    
-}
+    {
+      name: "Girls Like You",
+      link: "https://www.dropbox.com/s/yi1cpg16snrl3fc/girls-like-you.mp3?raw=1",
+      artists: "Maroon 5",
+      image: "https://www.dropbox.com/s/ouq5zzgbqsk9zx0/girls-like-you.png?raw=1"
+    }
+  ];
+  
+  var progress = document.querySelector("#progress");
+  var song = document.querySelector("#song");
+  var playBtn = document.querySelector("#play i");
+  var index = 0;
+  var img = document.querySelector(".img img");
+  
+  var title = document.querySelector("#title");
+  var thumb = document.querySelector("#thumb");
+  var artist = document.querySelector("#musician");
+  
+  var start = document.querySelector("#start");
+  var end = document.querySelector("#end");
+  
+  song.src = songs[index].link;
+  
+  title.innerHTML = songs[index].name;
+  artist.innerHTML = songs[index].artists;
+  thumb.src = songs[index].image;
+  
+  song.onloadedmetadata = function () {
+    progress.max = song.duration;
+    progress.value = song.currentTime;
+  
+    setInterval(() => {
+      var min = Math.floor(song.duration / 60);
+      var sec = Math.floor(song.duration % 60);
+  
+      var curMin = Math.floor(song.currentTime / 60);
+      var curSec = Math.floor(song.currentTime % 60);
+  
+      if (sec < 10) {
+        sec = "0" + sec;
+      }
+      if (curSec < 10) {
+        curSec = "0" + curSec;
+      }
+      if (min < 10) {
+        min = "0" + min;
+      }
+      if (curMin < 10) {
+        curMin = "0" + curMin;
+      }
+  
+      end.innerHTML = min + ":" + sec;
+      start.innerHTML = curMin + ":" + curSec;
+    }, 1000);
+  };
+  
+  function playPause() {
+    if (playBtn.classList.contains("bx-pause")) {
+      song.pause();
+      playBtn.classList.remove("bx-pause");
+      playBtn.classList.add("bx-play");
+      img.classList.remove("play");
+    } else {
+      song.play();
+      playBtn.classList.remove("bx-play");
+      playBtn.classList.add("bx-pause");
+      img.classList.add("play");
+    }
+  }
+  
+  if (song.play()) {
+    setInterval(() => {
+      progress.value = song.currentTime;
+      if (song.currentTime == song.duration) {
+        nextPlay();
+      }
+    }, 1000);
+  }
+  
+  progress.onchange = function () {
+    song.play();
+    song.currentTime = progress.value;
+    playBtn.classList.remove("bx-play");
+    playBtn.classList.add("bx-pause");
+    img.classList.add("play");
+  };
+  
+  function nextPlay() {
+    index = index + 1;
+    if (index > songs.length) {
+      index = 0;
+      song.src = songs[index].link;
+      title.innerHTML = songs[index].name;
+      artist.innerHTML = songs[index].artists;
+      thumb.src = songs[index].image;
+      song.play();
+    } else {
+      song.src = songs[index].link;
+      title.innerHTML = songs[index].name;
+      artist.innerHTML = songs[index].artists;
+      thumb.src = songs[index].image;
+      song.play();
+    }
+  }
+  
+  function prevPlay() {
+    index = index - 1;
+    if (index < 0) {
+      index = songs.length;
+      song.src = songs[index].link;
+      title.innerHTML = songs[index].name;
+      artist.innerHTML = songs[index].artists;
+      thumb.src = songs[index].image;
+      song.play();
+    } else {
+      song.src = songs[index].link;
+      title.innerHTML = songs[index].name;
+      artist.innerHTML = songs[index].artists;
+      thumb.src = songs[index].image;
+      song.play();
+    }
+  }
+  
+ 
